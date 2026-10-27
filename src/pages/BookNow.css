@@ -1,0 +1,155 @@
+/* Container framework safely constraining fluid designs */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.booking-section {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+/* Fluid responsive grid system adapting flawlessly from phone to large desktop viewports */
+.booking-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  align-items: start;
+}
+
+.booking-info h2 {
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  font-size: 1.8rem;
+}
+
+.info-list {
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  padding: 0.6rem 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.insurance-note {
+  background: #e8f4fd;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+  border-left: 5px solid #007bff;
+}
+
+.insurance-note h3 {
+  color: #007bff;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+/* --- Clean Form UI & Widened Fields styling --- */
+
+.booking-form {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #f1f3f5;
+  padding-bottom: 0.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; /* Collapses neatly into stacked single elements on mobile layout screens */
+}
+
+.template-two-col .form-group {
+  flex: 1;
+  min-width: 200px; /* Forces wrap on narrow screens safely */
+}
+
+/* Splitting Name layouts safely side-by-side */
+.name-row .form-group {
+  flex: 2;
+  min-width: 140px;
+}
+
+.name-row .mi-input {
+  flex: 0.5;
+  min-width: 60px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.wide-group {
+  width: 100%; /* Ensures addresses and select inputs use the absolute maximum space possible */
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background: #0056b3;
+}
+
+/* Mobile specific visual tweaks */
+@media (max-width: 480px) {
+  .booking-form {
+    padding: 1.25rem;
+  }
+  .name-row .mi-input {
+    flex: 1;
+    min-width: 100%; /* Stacks the middle initial cleanly on ultra-narrow phones */
+  }
+}

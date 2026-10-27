@@ -1,0 +1,124 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- Flexible Brand Logo Layout --- */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Generous spacing between logo graphic and business name text */
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Constrains your logo image to fit nicely within standard navbar limits */
+.nav-logo-img {
+  height: 42px; 
+  width: auto;
+  object-fit: contain;
+  /* Multiplies pixels to mask light-colored checkered background patterns */
+  mix-blend-mode: multiply; 
+}
+
+.logo-text {
+  color: #2c3e50;
+}
+
+.logo-accent {
+  color: #007bff;
+}
+
+/* --- Navigation Links --- */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* --- Book Now Action Button --- */
+.nav-book-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.nav-book-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* --- Mobile Menu Toggle --- */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  transition: 0.3s;
+}
+
+/* --- Responsive Layout Breaks --- */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: white;
+    flex-direction: column;
+    padding: 2rem;
+    transition: left 0.3s;
+    gap: 1.5rem;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+}

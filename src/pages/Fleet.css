@@ -1,0 +1,131 @@
+/* --- Fleet Vehicle Showcase --- */
+.fleet-showcase {
+  padding: 5rem 0;
+}
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.fleet-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fleet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.fleet-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.fleet-card h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.capacity {
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.fleet-card ul {
+  list-style: none;
+  text-align: left;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.fleet-card li {
+  padding: 0.4rem 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* --- Safety & Compliance Standards Section --- */
+.fleet-features {
+  background: #f8f9fa;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.fleet-features h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+}
+
+.safety-subtext {
+  max-width: 650px;
+  margin: 0 auto 3rem;
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Upgraded multi-row layout for detailed compliance cards */
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  display: flex;
+  gap: 1.25rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+  align-items: flex-start;
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.feature-item:hover {
+  transform: scale(1.02);
+}
+
+.feature-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  padding-top: 2px;
+}
+
+.feature-item strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+.feature-item p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- Mobile View Adjustments --- */
+@media (max-width: 480px) {
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .feature-item {
+    padding: 1.25rem;
+  }
+}
